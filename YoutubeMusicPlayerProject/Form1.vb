@@ -18,13 +18,15 @@
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
         Dim deletePlaylist As PlaylistDBDataSet.PlaylistsRow
         deletePlaylist = PlaylistDBDataSet.Playlists.FindByID(PlaylistList.SelectedValue)
-        PlaylistsTableAdapter.Delete(deletePlaylist.ID, deletePlaylist.PlaylistName, deletePlaylist.PlaylistURLCode, deletePlaylist.VideoURLCode)
+        PlaylistsTableAdapter.Delete(deletePlaylist.ID, deletePlaylist.PlaylistName, deletePlaylist.PlaylistURLCode)
         PlaylistDBDataSet.Playlists.Rows.Remove(PlaylistDBDataSet.Playlists.FindByID(PlaylistList.SelectedValue))
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
-        Form3.Show()
-        Me.Close()
+        If PlaylistList.SelectedValue <> Nothing Then
+            Form3.Show()
+            Me.Close()
+        End If
     End Sub
 
     Private Sub BtnPlay_Click(sender As Object, e As EventArgs) Handles BtnPlay.Click

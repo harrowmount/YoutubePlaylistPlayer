@@ -8,7 +8,6 @@
         editPlaylist = Form1.PlaylistDBDataSet.Playlists.FindByID(Form1.PlaylistList.SelectedValue)
         TxtPlaylistName.Text = editPlaylist.PlaylistName
         TxtURLCode.Text = editPlaylist.PlaylistURLCode
-        TextBox1.Text = editPlaylist.VideoURLCode
 
     End Sub
 
@@ -16,13 +15,12 @@
         ErrorMsg.Text = ""
         ErrorMsg.Visible = False
         Try
-            If TxtPlaylistName.Text = "" OrElse TxtURLCode.Text = "" OrElse TextBox1.Text = "" Then
+            If TxtPlaylistName.Text = "" OrElse TxtURLCode.Text = "" Then
                 Throw New System.ApplicationException("All fields must be filled")
             End If
-            If TxtPlaylistName.Text <> editPlaylist.PlaylistName OrElse editPlaylist.PlaylistURLCode <> TxtURLCode.Text OrElse editPlaylist.VideoURLCode <> TextBox1.Text Then
+            If TxtPlaylistName.Text <> editPlaylist.PlaylistName OrElse editPlaylist.PlaylistURLCode <> TxtURLCode.Text Then
                 editPlaylist.PlaylistName = TxtPlaylistName.Text
                 editPlaylist.PlaylistURLCode = TxtURLCode.Text
-                editPlaylist.VideoURLCode = TextBox1.Text
                 Form1.PlaylistsTableAdapter.Update(Form1.PlaylistDBDataSet.Playlists)
             End If
             Me.Close()
