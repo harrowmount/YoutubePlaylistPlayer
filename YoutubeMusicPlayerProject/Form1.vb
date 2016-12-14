@@ -2,7 +2,7 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'PlaylistDBDataSet.Playlists' table. You can move, or remove it, as needed.
-        Me.PlaylistsTableAdapter.Fill(Me.PlaylistDBDataSet.Playlists)
+        PlaylistsTableAdapter.Fill(PlaylistDBDataSet.Playlists)
 
     End Sub
 
@@ -12,7 +12,7 @@
 
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
         Form2.Show()
-        Me.Close()
+        Close()
     End Sub
 
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
@@ -25,12 +25,12 @@
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
         If PlaylistList.SelectedValue <> Nothing Then
             Form3.Show()
-            Me.Close()
+            Close()
         End If
     End Sub
 
     Private Sub BtnPlay_Click(sender As Object, e As EventArgs) Handles BtnPlay.Click
         Form4.Show()
-        Me.Close()
+        Close()
     End Sub
 End Class

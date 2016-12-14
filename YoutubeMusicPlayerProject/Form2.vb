@@ -10,7 +10,7 @@
         ErrorMsg.Visible = False
         Try
             If TxtPlaylistName.Text = "" OrElse TxtURLCode.Text = "" Then
-                Throw New System.ApplicationException("All fields must be filled")
+                Throw New ApplicationException("All fields must be filled")
             End If
             Dim userPlaylistRow As PlaylistDBDataSet.PlaylistsRow
             userPlaylistRow = Form1.PlaylistDBDataSet.Playlists.NewRow
@@ -19,7 +19,7 @@
             Form1.PlaylistDBDataSet.Playlists.Rows.Add(userPlaylistRow)
             Form1.PlaylistsTableAdapter.Update(Form1.PlaylistDBDataSet.Playlists)
             Form1.Show()
-            Me.Close()
+            Close()
         Catch ex As ApplicationException
             ErrorMsg.Text = ex.Message
             ErrorMsg.Visible = True
@@ -28,7 +28,7 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Form1.Show()
-        Me.Close()
+        Close()
     End Sub
 
     Private Sub Form2_Closed(sender As Object, e As EventArgs) Handles Me.Closed
