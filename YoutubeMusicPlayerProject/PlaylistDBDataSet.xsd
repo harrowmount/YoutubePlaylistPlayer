@@ -33,7 +33,9 @@
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT ID, PlaylistName, PlaylistURLCode FROM Playlists</CommandText>
+                    <CommandText>SELECT        ID, PlaylistName, PlaylistURLCode
+FROM            Playlists
+ORDER BY PlaylistName</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -68,7 +70,7 @@
   <xs:element name="PlaylistDBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PlaylistDBDataSet" msprop:Generator_UserDSName="PlaylistDBDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Playlists" msprop:Generator_TableClassName="PlaylistsDataTable" msprop:Generator_TableVarName="tablePlaylists" msprop:Generator_RowChangedName="PlaylistsRowChanged" msprop:Generator_TablePropName="Playlists" msprop:Generator_RowDeletingName="PlaylistsRowDeleting" msprop:Generator_RowChangingName="PlaylistsRowChanging" msprop:Generator_RowEvHandlerName="PlaylistsRowChangeEventHandler" msprop:Generator_RowDeletedName="PlaylistsRowDeleted" msprop:Generator_RowClassName="PlaylistsRow" msprop:Generator_UserTableName="Playlists" msprop:Generator_RowEvArgName="PlaylistsRowChangeEvent">
+        <xs:element name="Playlists" msprop:Generator_TableClassName="PlaylistsDataTable" msprop:Generator_TableVarName="tablePlaylists" msprop:Generator_TablePropName="Playlists" msprop:Generator_RowDeletingName="PlaylistsRowDeleting" msprop:Generator_RowChangingName="PlaylistsRowChanging" msprop:Generator_RowEvHandlerName="PlaylistsRowChangeEventHandler" msprop:Generator_RowDeletedName="PlaylistsRowDeleted" msprop:Generator_UserTableName="Playlists" msprop:Generator_RowChangedName="PlaylistsRowChanged" msprop:Generator_RowEvArgName="PlaylistsRowChangeEvent" msprop:Generator_RowClassName="PlaylistsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />

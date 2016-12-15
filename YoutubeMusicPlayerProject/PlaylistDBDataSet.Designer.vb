@@ -863,7 +863,8 @@ Namespace PlaylistDBDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT ID, PlaylistName, PlaylistURLCode FROM Playlists"
+            Me._commandCollection(0).CommandText = "SELECT        ID, PlaylistName, PlaylistURLCode"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Playlists"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER"& _ 
+                " BY PlaylistName"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         

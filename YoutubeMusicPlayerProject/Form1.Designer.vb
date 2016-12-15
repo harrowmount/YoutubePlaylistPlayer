@@ -46,7 +46,6 @@ Partial Class Form1
         Me.PlaylistList.Location = New System.Drawing.Point(147, 16)
         Me.PlaylistList.Name = "PlaylistList"
         Me.PlaylistList.Size = New System.Drawing.Size(323, 164)
-        Me.PlaylistList.Sorted = True
         Me.PlaylistList.TabIndex = 0
         Me.PlaylistList.ValueMember = "ID"
         '

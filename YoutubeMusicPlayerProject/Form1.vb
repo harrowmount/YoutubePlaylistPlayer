@@ -27,14 +27,12 @@
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
         If PlaylistList.SelectedValue <> Nothing Then
             Form3.Show()
-            Close()
         End If
     End Sub
 
     Private Sub BtnPlay_Click(sender As Object, e As EventArgs) Handles BtnPlay.Click
         If PlaylistList.SelectedValue <> Nothing Then
             Form4.Show()
-            Close()
         End If
     End Sub
 End Class

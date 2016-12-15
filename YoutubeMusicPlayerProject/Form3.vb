@@ -6,6 +6,7 @@
         ErrorMsg.Text = ""
         ErrorMsg.Visible = False
         editPlaylist = Form1.PlaylistDBDataSet.Playlists.FindByID(Form1.PlaylistList.SelectedValue)
+        Form1.Close()
         TxtPlaylistName.Text = editPlaylist.PlaylistName
         TxtURLCode.Text = editPlaylist.PlaylistURLCode
 
