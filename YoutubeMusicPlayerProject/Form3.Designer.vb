@@ -22,6 +22,7 @@ Partial Class Form3
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form3))
         Me.TxtPlaylistName = New System.Windows.Forms.TextBox()
         Me.TxtURLCode = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -44,7 +45,7 @@ Partial Class Form3
         '
         Me.TxtURLCode.CausesValidation = False
         Me.TxtURLCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtURLCode.Location = New System.Drawing.Point(155, 71)
+        Me.TxtURLCode.Location = New System.Drawing.Point(155, 66)
         Me.TxtURLCode.MaxLength = 34
         Me.TxtURLCode.Name = "TxtURLCode"
         Me.TxtURLCode.Size = New System.Drawing.Size(207, 26)
@@ -52,7 +53,7 @@ Partial Class Form3
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 129)
+        Me.Button1.Location = New System.Drawing.Point(32, 127)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(80, 23)
         Me.Button1.TabIndex = 2
@@ -61,7 +62,7 @@ Partial Class Form3
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(282, 129)
+        Me.Button2.Location = New System.Drawing.Point(255, 125)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(80, 23)
         Me.Button2.TabIndex = 3
@@ -82,7 +83,7 @@ Partial Class Form3
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 71)
+        Me.Label2.Location = New System.Drawing.Point(12, 66)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(137, 20)
         Me.Label2.TabIndex = 5
@@ -92,7 +93,7 @@ Partial Class Form3
         '
         Me.ErrorMsg.AutoSize = True
         Me.ErrorMsg.ForeColor = System.Drawing.Color.Red
-        Me.ErrorMsg.Location = New System.Drawing.Point(98, 134)
+        Me.ErrorMsg.Location = New System.Drawing.Point(32, 105)
         Me.ErrorMsg.Name = "ErrorMsg"
         Me.ErrorMsg.Size = New System.Drawing.Size(39, 13)
         Me.ErrorMsg.TabIndex = 6
@@ -102,7 +103,7 @@ Partial Class Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(369, 163)
+        Me.ClientSize = New System.Drawing.Size(369, 161)
         Me.Controls.Add(Me.ErrorMsg)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -110,6 +111,8 @@ Partial Class Form3
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TxtURLCode)
         Me.Controls.Add(Me.TxtPlaylistName)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form3"
         Me.Text = "Edit Playlist"
         Me.ResumeLayout(False)
