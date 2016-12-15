@@ -23,6 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.PlaylistList = New System.Windows.Forms.ListBox()
         Me.PlaylistsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PlaylistDBDataSet = New YoutubeMusicPlayerProject.PlaylistDBDataSet()
@@ -45,6 +46,7 @@ Partial Class Form1
         Me.PlaylistList.Location = New System.Drawing.Point(147, 16)
         Me.PlaylistList.Name = "PlaylistList"
         Me.PlaylistList.Size = New System.Drawing.Size(323, 164)
+        Me.PlaylistList.Sorted = True
         Me.PlaylistList.TabIndex = 0
         Me.PlaylistList.ValueMember = "ID"
         '
@@ -108,6 +110,7 @@ Partial Class Form1
         Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.BtnAdd)
         Me.Controls.Add(Me.PlaylistList)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.Text = "Youtube Music Player"
         CType(Me.PlaylistsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

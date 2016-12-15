@@ -22,6 +22,7 @@ Partial Class Form2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
         Me.TxtPlaylistName = New System.Windows.Forms.TextBox()
         Me.TxtURLCode = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -52,7 +53,7 @@ Partial Class Form2
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 127)
+        Me.Button1.Location = New System.Drawing.Point(32, 127)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(80, 23)
         Me.Button1.TabIndex = 2
@@ -61,7 +62,7 @@ Partial Class Form2
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(282, 127)
+        Me.Button2.Location = New System.Drawing.Point(255, 125)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(80, 23)
         Me.Button2.TabIndex = 3
@@ -92,7 +93,7 @@ Partial Class Form2
         '
         Me.ErrorMsg.AutoSize = True
         Me.ErrorMsg.ForeColor = System.Drawing.Color.Red
-        Me.ErrorMsg.Location = New System.Drawing.Point(98, 132)
+        Me.ErrorMsg.Location = New System.Drawing.Point(32, 105)
         Me.ErrorMsg.Name = "ErrorMsg"
         Me.ErrorMsg.Size = New System.Drawing.Size(39, 13)
         Me.ErrorMsg.TabIndex = 6
@@ -102,7 +103,7 @@ Partial Class Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(369, 157)
+        Me.ClientSize = New System.Drawing.Size(369, 161)
         Me.Controls.Add(Me.ErrorMsg)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -110,6 +111,7 @@ Partial Class Form2
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TxtURLCode)
         Me.Controls.Add(Me.TxtPlaylistName)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form2"
         Me.Text = "Add New Playlist"
         Me.ResumeLayout(False)
