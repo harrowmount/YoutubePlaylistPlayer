@@ -1,10 +1,16 @@
-﻿Public Class Form2
+﻿'Form2 is used to create a new playlist row in the DB
 
+Public Class Form2
+
+    'Onload set error message to Null and make invisible
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ErrorMsg.Text = ""
         ErrorMsg.Visible = False
     End Sub
 
+    'OnClick fetch user entered values and set them to a new row object and push
+    'the object to the DB. On success close the window and open form1, if fail
+    'throw exception and make error message visible
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         ErrorMsg.Text = ""
         ErrorMsg.Visible = False
@@ -26,11 +32,12 @@
         End Try
     End Sub
 
+    'Close form
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Form1.Show()
         Close()
     End Sub
 
+    'If form is closed show form1
     Private Sub Form2_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Form1.Show()
     End Sub

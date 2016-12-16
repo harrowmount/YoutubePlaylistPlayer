@@ -178,9 +178,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="play-button.png" />
     <Content Include="PlaylistDB.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\error.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\success.png" />
     <Content Include="YoutubeIcon.ico" />
   </ItemGroup>
   <ItemGroup>

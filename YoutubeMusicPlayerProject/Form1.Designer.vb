@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
@@ -38,14 +38,18 @@ Partial Class Form1
         '
         'PlaylistList
         '
+        Me.PlaylistList.BackColor = System.Drawing.Color.Gray
+        Me.PlaylistList.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.PlaylistList.DataSource = Me.PlaylistsBindingSource
         Me.PlaylistList.DisplayMember = "PlaylistName"
         Me.PlaylistList.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PlaylistList.ForeColor = System.Drawing.Color.White
         Me.PlaylistList.FormattingEnabled = True
         Me.PlaylistList.ItemHeight = 20
-        Me.PlaylistList.Location = New System.Drawing.Point(147, 16)
+        Me.PlaylistList.Location = New System.Drawing.Point(146, 12)
+        Me.PlaylistList.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.PlaylistList.Name = "PlaylistList"
-        Me.PlaylistList.Size = New System.Drawing.Size(323, 164)
+        Me.PlaylistList.Size = New System.Drawing.Size(323, 180)
         Me.PlaylistList.TabIndex = 0
         Me.PlaylistList.ValueMember = "ID"
         '
@@ -61,39 +65,70 @@ Partial Class Form1
         '
         'BtnAdd
         '
+        Me.BtnAdd.BackColor = System.Drawing.Color.Gray
+        Me.BtnAdd.FlatAppearance.BorderSize = 0
+        Me.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAdd.ForeColor = System.Drawing.Color.White
+        Me.BtnAdd.Image = Global.YoutubeMusicPlayerProject.My.Resources.Resources.plus
+        Me.BtnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnAdd.Location = New System.Drawing.Point(12, 12)
+        Me.BtnAdd.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.BtnAdd.Name = "BtnAdd"
-        Me.BtnAdd.Size = New System.Drawing.Size(129, 38)
+        Me.BtnAdd.Size = New System.Drawing.Size(128, 38)
         Me.BtnAdd.TabIndex = 1
         Me.BtnAdd.Text = "Add new playlist..."
-        Me.BtnAdd.UseVisualStyleBackColor = True
+        Me.BtnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnAdd.UseVisualStyleBackColor = False
         '
         'BtnEdit
         '
-        Me.BtnEdit.Location = New System.Drawing.Point(12, 56)
+        Me.BtnEdit.BackColor = System.Drawing.Color.Gray
+        Me.BtnEdit.FlatAppearance.BorderSize = 0
+        Me.BtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnEdit.ForeColor = System.Drawing.Color.White
+        Me.BtnEdit.Image = Global.YoutubeMusicPlayerProject.My.Resources.Resources.info
+        Me.BtnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnEdit.Location = New System.Drawing.Point(12, 59)
+        Me.BtnEdit.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.BtnEdit.Name = "BtnEdit"
-        Me.BtnEdit.Size = New System.Drawing.Size(129, 38)
+        Me.BtnEdit.Size = New System.Drawing.Size(128, 38)
         Me.BtnEdit.TabIndex = 2
         Me.BtnEdit.Text = "Edit playlist..."
-        Me.BtnEdit.UseVisualStyleBackColor = True
+        Me.BtnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnEdit.UseVisualStyleBackColor = False
         '
         'BtnDelete
         '
-        Me.BtnDelete.Location = New System.Drawing.Point(12, 100)
+        Me.BtnDelete.BackColor = System.Drawing.Color.Gray
+        Me.BtnDelete.FlatAppearance.BorderSize = 0
+        Me.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnDelete.ForeColor = System.Drawing.Color.White
+        Me.BtnDelete.Image = Global.YoutubeMusicPlayerProject.My.Resources.Resources._error
+        Me.BtnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnDelete.Location = New System.Drawing.Point(12, 106)
+        Me.BtnDelete.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.BtnDelete.Name = "BtnDelete"
-        Me.BtnDelete.Size = New System.Drawing.Size(129, 38)
+        Me.BtnDelete.Size = New System.Drawing.Size(128, 38)
         Me.BtnDelete.TabIndex = 3
         Me.BtnDelete.Text = "Delete playlist..."
-        Me.BtnDelete.UseVisualStyleBackColor = True
+        Me.BtnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnDelete.UseVisualStyleBackColor = False
         '
         'BtnPlay
         '
-        Me.BtnPlay.Location = New System.Drawing.Point(12, 144)
+        Me.BtnPlay.BackColor = System.Drawing.Color.Gray
+        Me.BtnPlay.FlatAppearance.BorderSize = 0
+        Me.BtnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnPlay.ForeColor = System.Drawing.Color.White
+        Me.BtnPlay.Image = Global.YoutubeMusicPlayerProject.My.Resources.Resources.play_button
+        Me.BtnPlay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnPlay.Location = New System.Drawing.Point(12, 153)
+        Me.BtnPlay.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.BtnPlay.Name = "BtnPlay"
-        Me.BtnPlay.Size = New System.Drawing.Size(129, 38)
+        Me.BtnPlay.Size = New System.Drawing.Size(128, 38)
         Me.BtnPlay.TabIndex = 4
         Me.BtnPlay.Text = "Play!"
-        Me.BtnPlay.UseVisualStyleBackColor = True
+        Me.BtnPlay.UseVisualStyleBackColor = False
         '
         'PlaylistsTableAdapter
         '
@@ -103,15 +138,19 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(482, 188)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(482, 202)
         Me.Controls.Add(Me.BtnPlay)
         Me.Controls.Add(Me.BtnDelete)
         Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.BtnAdd)
         Me.Controls.Add(Me.PlaylistList)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.MaximizeBox = False
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Youtube Music Player"
         CType(Me.PlaylistsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PlaylistDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -126,5 +165,4 @@ Partial Class Form1
     Friend WithEvents PlaylistDBDataSet As YoutubeMusicPlayerProject.PlaylistDBDataSet
     Friend WithEvents PlaylistsBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents PlaylistsTableAdapter As YoutubeMusicPlayerProject.PlaylistDBDataSetTableAdapters.PlaylistsTableAdapter
-
 End Class
