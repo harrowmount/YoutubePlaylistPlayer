@@ -5,9 +5,11 @@ Simple visual basic windows form application that saves and plays youtube playli
 ####Add Playlist
 Add a playlist by getting the playlist ID from the URL of the playlists main page.
 You can also assign a name to the playlist so that you can find it in the list of playlists in the main window.
+
 ![Add screenshot](http://i.imgur.com/BK2PbMM.jpg)
 ####Edit Playlist
 Edit the name and playlist ID of the selected playlist.
+
 ![Edit screenshot](http://i.imgur.com/puu4eeV.jpg)
 ####Delete Playlist
 Deletes the selected playlist from the list.
