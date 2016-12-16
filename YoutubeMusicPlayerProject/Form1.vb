@@ -1,13 +1,8 @@
 ﻿Public Class Form1
 
+    'Binds DB to the selection list
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'PlaylistDBDataSet.Playlists' table. You can move, or remove it, as needed.
         PlaylistsTableAdapter.Fill(PlaylistDBDataSet.Playlists)
-
-    End Sub
-
-    Private Sub BindingSource1_CurrentChanged(sender As Object, e As EventArgs)
-
     End Sub
 
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
