@@ -1,4 +1,5 @@
-﻿Public Class Form3
+﻿
+Public Class Form3
 
     Dim editPlaylist As PlaylistDBDataSet.PlaylistsRow
 

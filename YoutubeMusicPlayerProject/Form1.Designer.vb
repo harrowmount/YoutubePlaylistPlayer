@@ -32,6 +32,8 @@ Partial Class Form1
         Me.BtnDelete = New System.Windows.Forms.Button()
         Me.BtnPlay = New System.Windows.Forms.Button()
         Me.PlaylistsTableAdapter = New YoutubeMusicPlayerProject.PlaylistDBDataSetTableAdapters.PlaylistsTableAdapter()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PlaylistsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PlaylistDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -122,7 +124,7 @@ Partial Class Form1
         Me.BtnPlay.ForeColor = System.Drawing.Color.White
         Me.BtnPlay.Image = Global.YoutubeMusicPlayerProject.My.Resources.Resources.play_button
         Me.BtnPlay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnPlay.Location = New System.Drawing.Point(12, 153)
+        Me.BtnPlay.Location = New System.Drawing.Point(12, 154)
         Me.BtnPlay.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.BtnPlay.Name = "BtnPlay"
         Me.BtnPlay.Size = New System.Drawing.Size(128, 38)
@@ -134,12 +136,39 @@ Partial Class Form1
         '
         Me.PlaylistsTableAdapter.ClearBeforeFill = True
         '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.Color.Gray
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.ForeColor = System.Drawing.Color.White
+        Me.TextBox1.Location = New System.Drawing.Point(59, 203)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(411, 27)
+        Me.TextBox1.TabIndex = 5
+        Me.TextBox1.Text = "Video URL code..."
+        '
+        'Button1
+        '
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Image = Global.YoutubeMusicPlayerProject.My.Resources.Resources.play_button
+        Me.Button1.Location = New System.Drawing.Point(13, 195)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(0, 0, 0, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(39, 40)
+        Me.Button1.TabIndex = 6
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(482, 202)
+        Me.ClientSize = New System.Drawing.Size(482, 238)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.BtnPlay)
         Me.Controls.Add(Me.BtnDelete)
         Me.Controls.Add(Me.BtnEdit)
@@ -155,6 +184,7 @@ Partial Class Form1
         CType(Me.PlaylistsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PlaylistDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents PlaylistList As System.Windows.Forms.ListBox
@@ -165,4 +195,6 @@ Partial Class Form1
     Friend WithEvents PlaylistDBDataSet As YoutubeMusicPlayerProject.PlaylistDBDataSet
     Friend WithEvents PlaylistsBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents PlaylistsTableAdapter As YoutubeMusicPlayerProject.PlaylistDBDataSetTableAdapters.PlaylistsTableAdapter
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button1 As Button
 End Class

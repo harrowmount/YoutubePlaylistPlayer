@@ -1,4 +1,5 @@
-﻿Public Class Form4
+﻿
+Public Class Form4
     Private Sub Form4_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Form1.Show()
     End Sub

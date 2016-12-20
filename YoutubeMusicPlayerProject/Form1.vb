@@ -1,4 +1,5 @@
-﻿Public Class Form1
+﻿
+Public Class Form1
 
     'Binds DB to the selection list
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -29,5 +30,9 @@
         If PlaylistList.SelectedValue <> Nothing Then
             Form4.Show()
         End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Form5.Show()
     End Sub
 End Class
