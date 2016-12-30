@@ -41,4 +41,9 @@ Public Class Form2
     Private Sub Form2_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Form1.Show()
     End Sub
+
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+        End
+    End Sub
+
 End Class

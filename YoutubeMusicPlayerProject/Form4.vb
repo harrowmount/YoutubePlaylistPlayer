@@ -11,4 +11,9 @@ Public Class Form4
         Text = playlistSelected.PlaylistName
         WebBrowser1.DocumentText = "<iframe width=""590"" height=""360"" src=""https://www.youtube.com/embed/?list=" & playlistSelected.PlaylistURLCode & "&autoplay=1&loop=1"" frameborder=""0"" allowfullscreen></iframe>"
     End Sub
+
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+        End
+    End Sub
+
 End Class

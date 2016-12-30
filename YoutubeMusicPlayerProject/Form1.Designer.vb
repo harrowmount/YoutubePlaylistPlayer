@@ -34,8 +34,12 @@ Partial Class Form1
         Me.PlaylistsTableAdapter = New YoutubeMusicPlayerProject.PlaylistDBDataSetTableAdapters.PlaylistsTableAdapter()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PlaylistsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PlaylistDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'PlaylistList
@@ -155,11 +159,33 @@ Partial Class Form1
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Image = Global.YoutubeMusicPlayerProject.My.Resources.Resources.play_button
         Me.Button1.Location = New System.Drawing.Point(13, 195)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(0, 0, 0, 0)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(0)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(39, 40)
         Me.Button1.TabIndex = 6
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'NotifyIcon1
+        '
+        Me.NotifyIcon1.BalloonTipText = "Youtube Playlist Player"
+        Me.NotifyIcon1.BalloonTipTitle = "Youtube Playlist Player"
+        Me.NotifyIcon1.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
+        Me.NotifyIcon1.Text = "Youtube Playlist Player"
+        Me.NotifyIcon1.Visible = True
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 48)
+        Me.ContextMenuStrip1.Text = "Close"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItem1.Text = "Close"
         '
         'Form1
         '
@@ -183,6 +209,7 @@ Partial Class Form1
         Me.Text = "Youtube Music Player"
         CType(Me.PlaylistsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PlaylistDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -197,4 +224,7 @@ Partial Class Form1
     Friend WithEvents PlaylistsTableAdapter As YoutubeMusicPlayerProject.PlaylistDBDataSetTableAdapters.PlaylistsTableAdapter
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents NotifyIcon1 As NotifyIcon
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
 End Class

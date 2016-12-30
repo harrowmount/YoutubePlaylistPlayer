@@ -22,8 +22,13 @@ Partial Class Form5
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form5))
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
+        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'WebBrowser1
@@ -41,6 +46,28 @@ Partial Class Form5
         Me.WebBrowser1.TabIndex = 1
         Me.WebBrowser1.WebBrowserShortcutsEnabled = False
         '
+        'NotifyIcon1
+        '
+        Me.NotifyIcon1.BalloonTipText = "Youtube Playlist Player"
+        Me.NotifyIcon1.BalloonTipTitle = "Youtube Playlist Player"
+        Me.NotifyIcon1.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
+        Me.NotifyIcon1.Text = "Youtube Playlist Player"
+        Me.NotifyIcon1.Visible = True
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 48)
+        Me.ContextMenuStrip1.Text = "Close"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItem1.Text = "Close"
+        '
         'Form5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -54,9 +81,13 @@ Partial Class Form5
         Me.Name = "Form5"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Video player"
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents WebBrowser1 As WebBrowser
+    Friend WithEvents NotifyIcon1 As NotifyIcon
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
 End Class
