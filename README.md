@@ -1,6 +1,6 @@
 # YoutubePlaylistPlayer
 Simple visual basic windows form application that saves and plays youtube playlists from a DB
-![Main window screenshot](http://i.imgur.com/HyuOO2F.jpg)
+![Main window screenshot](http://i.imgur.com/hN5eRK7.jpg)
 ##Features
 ####Add Playlist
 Add a playlist by getting the playlist ID from the URL of the playlists main page.
