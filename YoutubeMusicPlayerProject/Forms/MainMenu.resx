@@ -117,22 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="PlaylistsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>165, 17</value>
-  </metadata>
-  <metadata name="PlaylistDBDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="PlaylistDBDataSet11.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="PlaylistsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>338, 17</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BtnPlay.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAB6MAAAejATAvssUAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAAB9klEQVRYR82Xu04CQRSG6fQBBLUxxhgTCx9EC2Nr50v4ACa+A1TWxsbYGBEj0mFMjJUFFhZ4QcAL
+        IHLL7vH87CzZHQ6wxpVxwheWmTPn/MzlzGyEiAJxd7w4UUxGV0unsQSTYXJMTYFn1CVgA1vJh4RY6aV0
+        MjXLjuOlVKzK3xQIxzaOvpJPL2IluE/PT5aT0V12VPc5/xl1+IAvKQYQK4vp6Ax3zmrOfkMWPqVYfRWF
+        1PQKd8hrDsIgD996PN8P9c//IrhLXh+J3gPmiQ3CHPZBZL1roidALTipQ4+Pq3VqPh3Q68Wy2B4UxPIJ
+        UFtt5Gqv3W6zuU12p0qVmy3RJiB1d4s6ArBnZUMfEGBbX9yFZVgtahaOqJxeEm0DEO8KQNYKmmS8AlBs
+        q0l2+40q15ui/VA4JmJHVHqVjTR0Ab1itanxuE/l8wWx3yAQG8OP3C4a6AwUwAWjYbVeeKFuiH0HkIAA
+        HCJSYx/DBDjF5g+PRn6Pymdzog+NDATgJJMa+xgtwCm21SCr8UDvl2uiHw85CMBxKjX2EVRAt9gW06HP
+        3I7oS1H7FwKMT4HxRWh2GxpPRMZTMfvBNJg7jLoCTB/HIPCF5Pkw/AsJMH4lA0YvpS5Gr+UuaiTMvJi4
+        YJ7Uwhz/q5kXtUXH/3Kqg6yl0naIr+cU+Qa8gnruzFd4UgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAB6MAAAejATAvssUAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAAB9klEQVRYR82Xu04CQRSG6fQBBLUxxhgTCx9EC2Nr50v4ACa+A1TWxsbYGBEj0mFMjJUFFhZ4QcAL
+        IHLL7vH87CzZHQ6wxpVxwheWmTPn/MzlzGyEiAJxd7w4UUxGV0unsQSTYXJMTYFn1CVgA1vJh4RY6aV0
+        MjXLjuOlVKzK3xQIxzaOvpJPL2IluE/PT5aT0V12VPc5/xl1+IAvKQYQK4vp6Ax3zmrOfkMWPqVYfRWF
+        1PQKd8hrDsIgD996PN8P9c//IrhLXh+J3gPmiQ3CHPZBZL1roidALTipQ4+Pq3VqPh3Q68Wy2B4UxPIJ
+        UFtt5Gqv3W6zuU12p0qVmy3RJiB1d4s6ArBnZUMfEGBbX9yFZVgtahaOqJxeEm0DEO8KQNYKmmS8AlBs
+        q0l2+40q15ui/VA4JmJHVHqVjTR0Ab1itanxuE/l8wWx3yAQG8OP3C4a6AwUwAWjYbVeeKFuiH0HkIAA
+        HCJSYx/DBDjF5g+PRn6Pymdzog+NDATgJJMa+xgtwCm21SCr8UDvl2uiHw85CMBxKjX2EVRAt9gW06HP
+        3I7oS1H7FwKMT4HxRWh2GxpPRMZTMfvBNJg7jLoCTB/HIPCF5Pkw/AsJMH4lA0YvpS5Gr+UuaiTMvJi4
+        YJ7Uwhz/q5kXtUXH/3Kqg6yl0naIr+cU+Qa8gnruzFd4UgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="NotifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>506, 17</value>
+    <value>178, 17</value>
   </metadata>
   <metadata name="ContextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>621, 17</value>
+    <value>293, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="NotifyIcon1.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAAAAAAAEAIABgKwAAlgAAAICAAAABACAAKAgBAPYrAABgYAAAAQAgAKiUAAAeNAEASEgAAAEA

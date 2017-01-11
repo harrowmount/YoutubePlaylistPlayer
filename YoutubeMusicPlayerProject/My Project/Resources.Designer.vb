@@ -85,7 +85,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property play_button() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("play-button", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("play_button", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

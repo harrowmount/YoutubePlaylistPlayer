@@ -25,29 +25,26 @@ Partial Class MainMenu
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainMenu))
         Me.PlaylistList = New System.Windows.Forms.ListBox()
-        Me.PlaylistsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PlaylistDBDataSet = New YoutubeMusicPlayerProject.PlaylistDBDataSet()
         Me.BtnAdd = New System.Windows.Forms.Button()
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.BtnDelete = New System.Windows.Forms.Button()
         Me.BtnPlay = New System.Windows.Forms.Button()
-        Me.PlaylistsTableAdapter = New YoutubeMusicPlayerProject.PlaylistDBDataSetTableAdapters.PlaylistsTableAdapter()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        CType(Me.PlaylistsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PlaylistDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PlaylistDBDataSet11 = New YoutubeMusicPlayerProject.PlaylistDBDataSet1()
         Me.ContextMenuStrip1.SuspendLayout()
+        CType(Me.PlaylistDBDataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PlaylistList
         '
         Me.PlaylistList.BackColor = System.Drawing.Color.Gray
         Me.PlaylistList.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.PlaylistList.DataSource = Me.PlaylistsBindingSource
-        Me.PlaylistList.DisplayMember = "PlaylistName"
+        Me.PlaylistList.DataSource = Me.PlaylistDBDataSet11
+        Me.PlaylistList.DisplayMember = "Playlists.PlaylistName"
         Me.PlaylistList.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PlaylistList.ForeColor = System.Drawing.Color.White
         Me.PlaylistList.FormattingEnabled = True
@@ -57,17 +54,7 @@ Partial Class MainMenu
         Me.PlaylistList.Name = "PlaylistList"
         Me.PlaylistList.Size = New System.Drawing.Size(323, 180)
         Me.PlaylistList.TabIndex = 0
-        Me.PlaylistList.ValueMember = "ID"
-        '
-        'PlaylistsBindingSource
-        '
-        Me.PlaylistsBindingSource.DataMember = "Playlists"
-        Me.PlaylistsBindingSource.DataSource = Me.PlaylistDBDataSet
-        '
-        'PlaylistDBDataSet
-        '
-        Me.PlaylistDBDataSet.DataSetName = "PlaylistDBDataSet"
-        Me.PlaylistDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.PlaylistList.ValueMember = "Playlists.ID"
         '
         'BtnAdd
         '
@@ -126,7 +113,7 @@ Partial Class MainMenu
         Me.BtnPlay.FlatAppearance.BorderSize = 0
         Me.BtnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnPlay.ForeColor = System.Drawing.Color.White
-        Me.BtnPlay.Image = Global.YoutubeMusicPlayerProject.My.Resources.Resources.play_button
+        Me.BtnPlay.Image = CType(resources.GetObject("BtnPlay.Image"), System.Drawing.Image)
         Me.BtnPlay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnPlay.Location = New System.Drawing.Point(12, 154)
         Me.BtnPlay.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
@@ -135,10 +122,6 @@ Partial Class MainMenu
         Me.BtnPlay.TabIndex = 4
         Me.BtnPlay.Text = "Play!"
         Me.BtnPlay.UseVisualStyleBackColor = False
-        '
-        'PlaylistsTableAdapter
-        '
-        Me.PlaylistsTableAdapter.ClearBeforeFill = True
         '
         'TextBox1
         '
@@ -157,7 +140,7 @@ Partial Class MainMenu
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Image = Global.YoutubeMusicPlayerProject.My.Resources.Resources.play_button
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Location = New System.Drawing.Point(13, 195)
         Me.Button1.Margin = New System.Windows.Forms.Padding(0)
         Me.Button1.Name = "Button1"
@@ -178,16 +161,21 @@ Partial Class MainMenu
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 48)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(104, 26)
         Me.ContextMenuStrip1.Text = "Close"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(103, 22)
         Me.ToolStripMenuItem1.Text = "Close"
         '
-        'Form1
+        'PlaylistDBDataSet11
+        '
+        Me.PlaylistDBDataSet11.DataSetName = "PlaylistDBDataSet1"
+        Me.PlaylistDBDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -204,12 +192,11 @@ Partial Class MainMenu
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.MaximizeBox = False
-        Me.Name = "Form1"
+        Me.Name = "MainMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Youtube Music Player"
-        CType(Me.PlaylistsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PlaylistDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
+        CType(Me.PlaylistDBDataSet11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -219,12 +206,10 @@ Partial Class MainMenu
     Friend WithEvents BtnEdit As System.Windows.Forms.Button
     Friend WithEvents BtnDelete As System.Windows.Forms.Button
     Friend WithEvents BtnPlay As System.Windows.Forms.Button
-    Friend WithEvents PlaylistDBDataSet As YoutubeMusicPlayerProject.PlaylistDBDataSet
-    Friend WithEvents PlaylistsBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents PlaylistsTableAdapter As YoutubeMusicPlayerProject.PlaylistDBDataSetTableAdapters.PlaylistsTableAdapter
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents NotifyIcon1 As NotifyIcon
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents PlaylistDBDataSet11 As PlaylistDBDataSet1
 End Class
