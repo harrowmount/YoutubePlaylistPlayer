@@ -2,7 +2,7 @@
 ''' <summary>
 ''' Form 3 is the edit playlist form
 ''' </summary>
-Public Class Form3
+Public Class EditPlaylist
 
     Dim editPlaylist As PlaylistDBDataSet.PlaylistsRow
 
@@ -12,8 +12,8 @@ Public Class Form3
     Private Sub Form2_Load() Handles MyBase.Load
         ErrorMsg.Text = ""
         ErrorMsg.Visible = False
-        editPlaylist = Form1.PlaylistDBDataSet.Playlists.FindByID(CInt(Form1.PlaylistList.SelectedValue))
-        Form1.Close()
+        editPlaylist = MainMenu.PlaylistDBDataSet.Playlists.FindByID(CInt(MainMenu.PlaylistList.SelectedValue))
+        MainMenu.Close()
         TxtPlaylistName.Text = editPlaylist.PlaylistName
         TxtURLCode.Text = editPlaylist.PlaylistURLCode
 
@@ -32,7 +32,7 @@ Public Class Form3
             If TxtPlaylistName.Text <> editPlaylist.PlaylistName OrElse editPlaylist.PlaylistURLCode <> TxtURLCode.Text Then
                 editPlaylist.PlaylistName = TxtPlaylistName.Text
                 editPlaylist.PlaylistURLCode = TxtURLCode.Text
-                Form1.PlaylistsTableAdapter.Update(editPlaylist)
+                MainMenu.PlaylistsTableAdapter.Update(editPlaylist)
             End If
             Close()
         Catch ex As ApplicationException
@@ -52,7 +52,7 @@ Public Class Form3
     ''' On form close open form1
     ''' </summary>
     Private Sub Form3_Closed() Handles Me.Closed
-        Form1.Show()
+        MainMenu.Show()
     End Sub
 
     ''' <summary>

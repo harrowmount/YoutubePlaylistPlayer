@@ -1,21 +1,21 @@
 ﻿''' <summary>
 ''' Plays a single video
 ''' </summary>
-Public Class Form5
+Public Class PlayVideo
 
     ''' <summary>
     ''' On form close show form1
     ''' </summary>
     Private Sub Form5_Closed() Handles Me.Closed
-        Form1.Show()
+        MainMenu.Show()
     End Sub
 
     ''' <summary>
     ''' embeds an iframe inside a web browser that plays the selected video
     ''' </summary>
     Private Sub Form5_Load() Handles Me.Load
-        Dim VideoURL As String = Form1.TextBox1.Text
-        Form1.Close()
+        Dim VideoURL As String = MainMenu.TextBox1.Text
+        MainMenu.Close()
         WebBrowser1.DocumentText = "<iframe width=""590"" height=""360"" src=""https://www.youtube.com/embed/" & VideoURL & """ frameborder=""0"" allowfullscreen></iframe>"
     End Sub
 

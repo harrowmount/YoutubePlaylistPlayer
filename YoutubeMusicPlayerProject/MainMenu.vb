@@ -2,7 +2,7 @@
 ''' <summary>
 ''' Main menu form
 ''' </summary>
-Public Class Form1
+Public Class MainMenu
 
     ''' <summary>
     ''' Binds DB to the selection list
@@ -15,7 +15,7 @@ Public Class Form1
     ''' Opens form 2 when add button is clicked
     ''' </summary>
     Private Sub BtnAdd_Click() Handles BtnAdd.Click
-        Form2.Show()
+        CreatePlaylist.Show()
         Close()
     End Sub
 
@@ -36,7 +36,7 @@ Public Class Form1
     ''' </summary>
     Private Sub BtnEdit_Click() Handles BtnEdit.Click
         If PlaylistList.SelectedValue IsNot Nothing Then
-            Form3.Show()
+            EditPlaylist.Show()
         End If
     End Sub
 
@@ -45,7 +45,7 @@ Public Class Form1
     ''' </summary>
     Private Sub BtnPlay_Click() Handles BtnPlay.Click
         If PlaylistList.SelectedValue IsNot Nothing Then
-            Form4.Show()
+            PlayPlaylist.Show()
         End If
     End Sub
 
@@ -53,7 +53,7 @@ Public Class Form1
     ''' Opens form 5 when play video button is clicked
     ''' </summary>
     Private Sub Button1_Click() Handles Button1.Click
-        Form5.Show()
+        PlayVideo.Show()
     End Sub
 
     ''' <summary>

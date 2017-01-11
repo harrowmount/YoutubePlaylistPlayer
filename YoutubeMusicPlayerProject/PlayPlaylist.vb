@@ -1,13 +1,13 @@
 ﻿''' <summary>
 ''' Plays a playlist
 ''' </summary>
-Public Class Form4
+Public Class PlayPlaylist
 
     ''' <summary>
     ''' On form close show form1
     ''' </summary>
     Private Sub Form4_Closed() Handles Me.Closed
-        Form1.Show()
+        MainMenu.Show()
     End Sub
 
     ''' <summary>
@@ -15,8 +15,8 @@ Public Class Form4
     ''' </summary>
     Private Sub Form4_Load() Handles Me.Load
         Dim playlistSelected As PlaylistDBDataSet.PlaylistsRow
-        playlistSelected = Form1.PlaylistDBDataSet.Playlists.FindByID(CInt(Form1.PlaylistList.SelectedValue))
-        Form1.Close()
+        playlistSelected = MainMenu.PlaylistDBDataSet.Playlists.FindByID(CInt(MainMenu.PlaylistList.SelectedValue))
+        MainMenu.Close()
         Text = playlistSelected.PlaylistName
         WebBrowser1.DocumentText = "<iframe width=""590"" height=""360"" src=""https://www.youtube.com/embed/?list=" & playlistSelected.PlaylistURLCode & "&autoplay=1&loop=1"" frameborder=""0"" allowfullscreen></iframe>"
     End Sub

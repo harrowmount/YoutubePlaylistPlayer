@@ -1,7 +1,7 @@
 ﻿''' <summary>
 ''' Form2 is used to create a new playlist row in the DB
 ''' </summary>
-Public Class Form2
+Public Class CreatePlaylist
 
     ''' <summary>
     ''' Onload set error message to Null and make invisible
@@ -24,12 +24,12 @@ Public Class Form2
                 Throw New ApplicationException("All fields must be filled")
             End If
             Dim userPlaylistRow As PlaylistDBDataSet.PlaylistsRow
-            userPlaylistRow = CType(Form1.PlaylistDBDataSet.Playlists.NewRow, PlaylistDBDataSet.PlaylistsRow)
+            userPlaylistRow = CType(MainMenu.PlaylistDBDataSet.Playlists.NewRow, PlaylistDBDataSet.PlaylistsRow)
             userPlaylistRow.PlaylistName = TxtPlaylistName.Text
             userPlaylistRow.PlaylistURLCode = TxtURLCode.Text
-            Form1.PlaylistDBDataSet.Playlists.Rows.Add(userPlaylistRow)
-            Form1.PlaylistsTableAdapter.Update(Form1.PlaylistDBDataSet.Playlists)
-            Form1.Show()
+            MainMenu.PlaylistDBDataSet.Playlists.Rows.Add(userPlaylistRow)
+            MainMenu.PlaylistsTableAdapter.Update(MainMenu.PlaylistDBDataSet.Playlists)
+            MainMenu.Show()
             Close()
         Catch ex As ApplicationException
             ErrorMsg.Text = ex.Message
@@ -48,7 +48,7 @@ Public Class Form2
     ''' If form is closed show form1
     ''' </summary>
     Private Sub Form2_Closed() Handles Me.Closed
-        Form1.Show()
+        MainMenu.Show()
     End Sub
 
     ''' <summary>
