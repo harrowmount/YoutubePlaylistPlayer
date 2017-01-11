@@ -1,19 +1,28 @@
 ﻿
+''' <summary>
+''' Form 3 is the edit playlist form
+''' </summary>
 Public Class Form3
 
     Dim editPlaylist As PlaylistDBDataSet.PlaylistsRow
 
-    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    ''' <summary>
+    ''' On form load fetch userinput from form1 and use it to find correct row from DB
+    ''' </summary>
+    Private Sub Form2_Load() Handles MyBase.Load
         ErrorMsg.Text = ""
         ErrorMsg.Visible = False
-        editPlaylist = Form1.PlaylistDBDataSet.Playlists.FindByID(Form1.PlaylistList.SelectedValue)
+        editPlaylist = Form1.PlaylistDBDataSet.Playlists.FindByID(CInt(Form1.PlaylistList.SelectedValue))
         Form1.Close()
         TxtPlaylistName.Text = editPlaylist.PlaylistName
         TxtURLCode.Text = editPlaylist.PlaylistURLCode
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    ''' <summary>
+    ''' Submits user input to edit the selected row.
+    ''' </summary>
+    Private Sub Button2_Click() Handles Button2.Click
         ErrorMsg.Text = ""
         ErrorMsg.Visible = False
         Try
@@ -32,16 +41,24 @@ Public Class Form3
         End Try
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Form1.Show()
+    ''' <summary>
+    ''' Closes form
+    ''' </summary>
+    Private Sub Button1_Click() Handles Button1.Click
         Close()
     End Sub
 
-    Private Sub Form3_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+    ''' <summary>
+    ''' On form close open form1
+    ''' </summary>
+    Private Sub Form3_Closed() Handles Me.Closed
         Form1.Show()
     End Sub
 
-    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+    ''' <summary>
+    ''' Allows ending program through notify icon
+    ''' </summary>
+    Private Sub ToolStripMenuItem1_Click() Handles ToolStripMenuItem1.Click
         End
     End Sub
 
