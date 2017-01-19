@@ -6,7 +6,7 @@ Public Class Form2
     ''' <summary>
     ''' Onload set error message to Null and make invisible
     ''' </summary>
-    Private Sub Form2_Load() Handles MyBase.Load
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ErrorMsg.Text = ""
         ErrorMsg.Visible = False
     End Sub
@@ -16,7 +16,7 @@ Public Class Form2
     ''' the object to the DB. On success close the window and open form1, if fail 
     ''' then throw an exception and make error message visible
     ''' </summary>
-    Private Sub Button2_Click() Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         ErrorMsg.Text = ""
         ErrorMsg.Visible = False
         Try
@@ -40,21 +40,21 @@ Public Class Form2
     ''' <summary>
     ''' Close form
     ''' </summary>
-    Private Sub Button1_Click() Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Close()
     End Sub
 
     ''' <summary>
     ''' If form is closed show form1
     ''' </summary>
-    Private Sub Form2_Closed() Handles Me.Closed
+    Private Sub Form2_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Form1.Show()
     End Sub
 
     ''' <summary>
     ''' Allows ending program through notify icon
     ''' </summary>
-    Private Sub ToolStripMenuItem1_Click() Handles ToolStripMenuItem1.Click
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
         End
     End Sub
 
