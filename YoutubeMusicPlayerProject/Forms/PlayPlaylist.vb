@@ -6,14 +6,14 @@ Public Class PlayPlaylist
     ''' <summary>
     ''' On form close show form1
     ''' </summary>
-    Private Sub Form4_Closed() Handles Me.Closed
+    Private Sub Form4_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         MainMenu.Show()
     End Sub
 
     ''' <summary>
     ''' embeds an iframe inside a web browser that plays the selected playlist
     ''' </summary>
-    Private Sub Form4_Load() Handles Me.Load
+    Private Sub Form4_Load(sender As Object, e As EventArgs) Handles Me.Load
         Dim playlistSelected As PlaylistDBDataSet.PlaylistsRow
         playlistSelected = MainMenu.PlaylistDBDataSet.Playlists.FindByID(CInt(MainMenu.PlaylistList.SelectedValue))
         MainMenu.Close()
@@ -24,7 +24,7 @@ Public Class PlayPlaylist
     ''' <summary>
     ''' Allows ending program through notify icon
     ''' </summary>
-    Private Sub ToolStripMenuItem1_Click() Handles ToolStripMenuItem1.Click
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
         End
     End Sub
 

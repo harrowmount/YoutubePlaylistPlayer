@@ -9,7 +9,7 @@ Public Class EditPlaylist
     ''' <summary>
     ''' On form load fetch userinput from form1 and use it to find correct row from DB
     ''' </summary>
-    Private Sub Form2_Load() Handles MyBase.Load
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ErrorMsg.Text = ""
         ErrorMsg.Visible = False
         editPlaylist = MainMenu.PlaylistDBDataSet.Playlists.FindByID(CInt(MainMenu.PlaylistList.SelectedValue))
@@ -22,7 +22,7 @@ Public Class EditPlaylist
     ''' <summary>
     ''' Submits user input to edit the selected row.
     ''' </summary>
-    Private Sub Button2_Click() Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         ErrorMsg.Text = ""
         ErrorMsg.Visible = False
         Try
@@ -44,21 +44,21 @@ Public Class EditPlaylist
     ''' <summary>
     ''' Closes form
     ''' </summary>
-    Private Sub Button1_Click() Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Close()
     End Sub
 
     ''' <summary>
     ''' On form close open form1
     ''' </summary>
-    Private Sub Form3_Closed() Handles Me.Closed
+    Private Sub Form3_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         MainMenu.Show()
     End Sub
 
     ''' <summary>
     ''' Allows ending program through notify icon
     ''' </summary>
-    Private Sub ToolStripMenuItem1_Click() Handles ToolStripMenuItem1.Click
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
         End
     End Sub
 
