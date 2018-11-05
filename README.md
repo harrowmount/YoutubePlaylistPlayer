@@ -1,5 +1,4 @@
 # YoutubePlaylistPlayer
-Master:` `[![Master Build Status](https://travis-ci.org/jjackson37/YoutubePlaylistPlayer.svg?branch=master)](https://travis-ci.org/jjackson37/YoutubePlaylistPlayer)` `Dev:` `[![Dev Build Status](https://travis-ci.org/jjackson37/YoutubePlaylistPlayer.svg?branch=Development)](https://travis-ci.org/jjackson37/YoutubePlaylistPlayer)
 
 Simple visual basic windows form application that saves and plays youtube playlists from a DB
 ![Main window screenshot](http://i.imgur.com/hN5eRK7.jpg)
